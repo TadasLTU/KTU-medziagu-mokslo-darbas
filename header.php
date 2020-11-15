@@ -25,3 +25,5 @@
                 </ul>
             </div>
         </nav>
+        <?php require_once('./config.php');
+        require_once('./global_functions.php');
