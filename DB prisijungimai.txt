@@ -1,0 +1,14 @@
+Host
+ec2-52-208-175-161.eu-west-1.compute.amazonaws.com
+Database
+d69qvfcqcb709k
+User
+vfqdrdjlppnzca
+Port
+5432
+Password
+280bf09035aeffc48a00210382cf4c9217eee6c937b7a7686c677b3f805d113d
+URI
+postgres://vfqdrdjlppnzca:280bf09035aeffc48a00210382cf4c9217eee6c937b7a7686c677b3f805d113d@ec2-52-208-175-161.eu-west-1.compute.amazonaws.com:5432/d69qvfcqcb709k
+Heroku CLI
+heroku pg:psql postgresql-perpendicular-43570 --app medziagu-mokslas
