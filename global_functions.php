@@ -1,4 +1,6 @@
 <?php
+
+//grazenis var_dump
 function dump($data) {
   if(is_array($data)) { //If the given variable is an array, print using the print_r function.
       print "<pre>-----------------------\n";
@@ -15,9 +17,10 @@ function dump($data) {
   }
 } 
 
+
+//grazina array is query, gerai naudot veliau dump(rezultata) 
 function mfa_kaip_array($sql){
     $result = pg_query($GLOBALS['conn'], $sql);
-    $rows = [];
     while($row = pg_fetch_array($result))
     {
         $rows[] = $row;
@@ -25,6 +28,12 @@ function mfa_kaip_array($sql){
     return $rows;
 } 
 
+//query siuntimas i db
+function send_pg_query($sql){
+    pg_send_query($GLOBALS['conn'], $sql);
+}
+
+//vienam recordui ir vienam laukui is duombazes pasiimt, paduodi query i parametrus
 function gor($sql){
     $result = pg_query($GLOBALS['conn'], $sql);
     $row = pg_fetch_row($result);
