@@ -1,0 +1,1 @@
+# KTU-medziagu-mokslo-darbas
