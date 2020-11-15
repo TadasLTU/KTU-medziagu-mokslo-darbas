@@ -1,5 +1,5 @@
 <?php include('./header.php');?>
     <div class="container">
-        Hola
+    Page3
     </div>
 <?php include('./footer.php');?>
