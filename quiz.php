@@ -11,7 +11,7 @@
     <div class="container mt-3" id="quiz-container">
         
     </div>
-    <div class="d-flex justify-content-center align-items-center h-75" id="spinnerContainer">
+    <div class="d-flex justify-content-center align-items-center" id="spinnerContainer">
         <div class="spinner-grow text-primary" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -34,6 +34,7 @@
         $('#alertModal').on('hide.bs.modal', function (e) {
             $("#submitQuiz").removeClass("d-none");
             $.when($(".spinner-grow").fadeOut(600)).done(function() {
+                triggerSpinnerContainerHeight();
                 $('#quiz-container').fadeIn();  
             });
         })
@@ -45,6 +46,7 @@
         function loadDoc() {
             $("#newQuiz").addClass('d-none');
             $('.progress-container').fadeOut();
+            triggerSpinnerContainerHeight();
             $(".spinner-grow").fadeIn();
             if(!first) {
                 $('#quiz-container').fadeOut();
@@ -70,6 +72,7 @@
                     var submitButton = $("<button type='button' onClick='submitAnswers()' id='submitQuiz'>").addClass('btn btn-primary float-right mt-2').html("Tikrinti");
                     $('#quiz-container').append(submitButton);
                     $.when($(".spinner-grow").fadeOut(600)).done(function() {
+                        triggerSpinnerContainerHeight();
                         $('#quiz-container').fadeIn();  
                     });
                 },
@@ -119,6 +122,7 @@
             var validated = true;
             $("#submitQuiz").addClass("d-none");
             $.when($('#quiz-container').fadeOut()).done(function() {
+                triggerSpinnerContainerHeight();
                 $(".spinner-grow").fadeIn();
             });
             $('.collapse-question').each( function() {
@@ -152,6 +156,7 @@
                             $("div[name=\"" + q.correct + "\"]").addClass("text-success");
                         });
                         $.when($(".spinner-grow").fadeOut(600)).done(function() {
+                            triggerSpinnerContainerHeight();
                             $('.progress-container').fadeIn();
                             $('#progress-label').html(result.progress + " / 100%");
                             $('.progress-bar').css('width', result.progress + "%");
@@ -164,6 +169,16 @@
                         console.log(result);
                     }
                 });
+            }
+        }
+
+        function triggerSpinnerContainerHeight() {
+            if($("#spinnerContainer").hasClass("h-75")) {
+                $("#spinnerContainer").removeClass("h-75");
+                $("#spinnerContainer").addClass("h-0");
+            } else {
+                $("#spinnerContainer").removeClass("h-0");
+                $("#spinnerContainer").addClass("h-75");
             }
         }
     </script>
