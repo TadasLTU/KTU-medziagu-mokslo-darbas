@@ -7,16 +7,19 @@
             )
         );
         //dump($data);
-        // send_pg_query("CREATE TABLE Persons (
+        // send_pg_query("CREATE TABLE savitoji_varzda_apskaiciuoti (
         //     id SERIAL,
-        //     LastName varchar(255) NOT NULL,
-        //     FirstName varchar(255),
-        //     Age int,
+        //     itampa varchar(255) NOT NULL,
+        //     stipris varchar(255) NOT NULL,
+        //     skerspjuvis varchar(255) NOT NULL,
+        //     ilgis varchar(255) NOT NULL,
+        //     savitoji_varzda varchar(255),
         //     PRIMARY KEY (ID)
         // );");
-        //send_pg_query("INSERT INTO persons (lastname, firstname, age) VALUES('Snieckus', 'Erikas', '22')");
-        $data = mfa_kaip_array("SELECT * FROM persons");
-        dump($data);
+       // send_pg_query("INSERT INTO savitosios_varzos (metalas, savitoji_varza) VALUES('Aliuminis', 0.000000028)");
+
+        //$data = mfa_kaip_array("SELECT * FROM persons");
+        //dump($data);
         ?>
     </div>
 <?php include('./footer.php');?>

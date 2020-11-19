@@ -39,4 +39,31 @@ function gor($sql){
     $row = pg_fetch_row($result);
     return $row[0];
 }
+
+function autosearch($sql, $columns){
+    $array = mfa_kaip_array($sql);
+    ?>
+      <table class="table table-bordered" id="auts_main">
+        <thead>
+          <tr>
+            <?php 
+            foreach($columns as $key => $value){
+              echo '<th id="th_'.$key.'">'.ucfirst($value).'</th>';
+            }
+            echo '<th id="th_'.$key.'">Trinti</th>';?>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach($array as $arr){
+              echo '<tr id="tr_'.$arr['id'].'">';
+              foreach($columns as $key => $val){
+                echo '<td id="td_'.$arr['id'].'_'.$key.'">'.$arr[$key].'</td>';
+              }
+              echo '<td id="tr_'.$arr['id'].'"><button data-foo="'.$arr['id'].'" id="delete_'.$arr['id'].'" class="btn btn-danger"><b>-</b></button></td>';
+              echo '</tr>';
+          }?>
+        </tbody>
+      </table>
+    <?php
+  }
 ?>
