@@ -55,7 +55,7 @@
         <br>
         <div class="row">
             <div class="col-12" align="center" style="display:inline">
-                <span style="font-size:20px"><b>Savitoji varža</b></span><span id="result"><?php ' = '. $result ?: ''?></span>   
+                <span style="font-size:20px"><b>Savitoji varža</b></span><span id="result"><?= ' = '.$result;?></span>   
             </div>
         </div>
         <?php
