@@ -33,6 +33,11 @@ function send_pg_query($sql){
     pg_send_query($GLOBALS['conn'], $sql);
 }
 
+//siuncia inserta nurodzius lenteles pavadinima ir duomenu masyva
+function send_pg_insert($table_name, $data) {
+    pg_insert($GLOBALS['conn'], $table_name, $data);
+}
+
 //vienam recordui ir vienam laukui is duombazes pasiimt, paduodi query i parametrus
 function gor($sql){
     $result = pg_query($GLOBALS['conn'], $sql);
