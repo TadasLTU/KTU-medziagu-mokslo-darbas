@@ -1,11 +1,11 @@
 <?php include('./header.php');?>
     <div class="container">
-        <span id="id">Page1</span>
+        <!-- <span id="id">Page1</span> -->
         <?php
-        $data = array(array(
-            '0' => 'array'
-            )
-        );
+        // $data = array(array(
+        //     '0' => 'array'
+        //     )
+        // );
         //dump($data);
         // send_pg_query("CREATE TABLE savitoji_varzda_apskaiciuoti (
         //     id SERIAL,
