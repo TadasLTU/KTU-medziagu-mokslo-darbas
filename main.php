@@ -7,4 +7,4 @@
 <p>Nedas Žilovas IFC-7 gr.</p>
 <p>Erikas Sniečkus IFC-7 gr.</p>
 <p>Tadas Semionovas IFC-7 gr.</p>
-<p>Mantas Valatka IFC-7 gr. ?</p>
+<p>Mantas Valatka IFB-7 gr.</p>
