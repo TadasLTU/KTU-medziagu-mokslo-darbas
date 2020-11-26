@@ -168,7 +168,6 @@
                             $("div[name=\"" + q.correct + "\"]").addClass("text-success");
                         });
                         $.when($(".spinner-grow").fadeOut(600)).done(function() {
-                            $(".spinner-grow").css('display', 'none');
                             triggerSpinnerContainerHeight();
                             $('.progress-container').fadeIn();
                             $('#progress-label').html(parseInt(result.progress) + " / 100%");
@@ -188,9 +187,13 @@
         function triggerSpinnerContainerHeight() {
             if($("#spinnerContainer").hasClass("h-75")) {
                 $("#spinnerContainer").removeClass("h-75");
+                $("#spinnerContainer").removeClass("d-flex");
                 $("#spinnerContainer").addClass("h-0");
+                $("#spinnerContainer").addClass("d-none");
             } else {
                 $("#spinnerContainer").removeClass("h-0");
+                $("#spinnerContainer").removeClass("d-none");
+                $("#spinnerContainer").addClass("d-flex");
                 $("#spinnerContainer").addClass("h-75");
             }
         }
