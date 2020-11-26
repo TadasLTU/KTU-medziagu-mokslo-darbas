@@ -192,9 +192,9 @@
                 $("#spinnerContainer").addClass("d-none");
             } else {
                 $("#spinnerContainer").removeClass("h-0");
-                $("#spinnerContainer").removeClass("d-none");
                 $("#spinnerContainer").addClass("d-flex");
                 $("#spinnerContainer").addClass("h-75");
+                $("#spinnerContainer").removeClass("d-none");
             }
         }
     </script>
