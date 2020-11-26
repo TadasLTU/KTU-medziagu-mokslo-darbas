@@ -29,3 +29,4 @@
         </nav>
         <?php require_once('./config.php');
         require_once('./global_functions.php');
+        session_start();
