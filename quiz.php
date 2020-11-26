@@ -1,6 +1,16 @@
 <?php include('./header.php'); ?>
     <div class="container">
+        <?php if(isset($_SESSION['question_added']) && $_SESSION['question_added']) { ?>
+            <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                Jūsų klausimas pridėtas sėkmingai. Kai klausimas bus patvirtintas, jis bus rodomas tarp kitų klausimyno klausimų.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+        <?php
+            $_SESSION['question_added'] = false;
+        }
+        ?>
         <button class="btn btn-primary my-3 d-none" onClick="loadDoc()" id="newQuiz">Bandyti dar kartą</button>
+        <a class="btn btn-primary my-3" href="add_question.php">Pridėti klausimą</a>
         <div class="progress-container" style="display: none">
             <div class="progress">
                 <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -99,16 +109,18 @@
                 var className = "col-md-" + 12/totalAnswers;
                 var row = $("<div>").addClass("row py-4 px-5");
                 (q.answers).forEach( answ => {
-                    var radioButton = $("<input type='radio' name='" + q.question_id + "' value='" + answ.id + "'>");
-                    var answer = $("<div name='" + answ.id + "'>").addClass(className).append(radioButton).append(" " + answ.answer);
+                    var radioButton = $("<input type='radio' name='" + q.question_id + "' value='" + answ.id + "' id='" + answ.id + "'>").addClass("mr-1");
+                    var label = $("<label for='" + answ.id + "'>").html(" " + answ.answer);
+                    var answer = $("<div name='" + answ.id + "'>").addClass(className).append(radioButton).append(label);
                     row.append(answer);
                 });
                 collapse.append(row);
             } else {
                 var container = $("<div>").addClass("py-4 px-5");
                 (q.answers).forEach( answ => {
-                    var radioButton = $("<input type='radio' name='" + q.question_id + "' value='" + answ.id + "'>");
-                    var answer = $("<div>").append(radioButton).append(" " + answ.answer);
+                    var radioButton = $("<input type='radio' name='" + q.question_id + "' value='" + answ.id + "' id='" + answ.id + "'>").addClass("mr-1");
+                    var label = $("<label for='" + answ.id + "'>").html(" " + answ.answer);
+                    var answer = $("<div name='" + answ.id + "'>").append(radioButton).append(label);
                     container.append(answer);
                 });
                 collapse.append(container);
@@ -156,11 +168,12 @@
                             $("div[name=\"" + q.correct + "\"]").addClass("text-success");
                         });
                         $.when($(".spinner-grow").fadeOut(600)).done(function() {
+                            $(".spinner-grow").css('display', 'none');
                             triggerSpinnerContainerHeight();
                             $('.progress-container').fadeIn();
-                            $('#progress-label').html(result.progress + " / 100%");
-                            $('.progress-bar').css('width', result.progress + "%");
-                            $('.progress-bar').attr('aria-valuenow', result.progress);
+                            $('#progress-label').html(parseInt(result.progress) + " / 100%");
+                            $('.progress-bar').css('width', parseInt(result.progress) + "%");
+                            $('.progress-bar').attr('aria-valuenow', parseInt(result.progress));
                             $('#quiz-container').fadeIn();  
                             $('#newQuiz').removeClass("d-none");
                         });
