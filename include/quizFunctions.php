@@ -8,7 +8,7 @@
     }
 
     function index() {
-        $data = mfa_kaip_array("SELECT * FROM questions q INNER JOIN answers a ON (q.question_id = a.question_id) ORDER BY q.question_id");
+        $data = mfa_kaip_array("SELECT * FROM (SELECT * FROM questions WHERE verified ORDER BY RANDOM() LIMIT 5) q INNER JOIN answers a ON (q.question_id = a.question_id) ORDER BY q.question_id, RANDOM()");
         $json = array();
         $questions = array();
         $i = 1;
