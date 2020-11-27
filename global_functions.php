@@ -21,8 +21,13 @@ function dump($data) {
 //grazina array is query, gerai naudot veliau dump(rezultata) 
 function mfa_kaip_array($sql){
     $result = pg_query($GLOBALS['conn'], $sql);
+    ///dump($result);
+    $rows = null;
     while($row = pg_fetch_array($result))
     {
+      if($row == null){
+        break;
+      }
         $rows[] = $row;
     }
     return $rows;
@@ -59,14 +64,17 @@ function autosearch($sql, $columns){
           </tr>
         </thead>
         <tbody>
-          <?php foreach($array as $arr){
+          <?php if($array){
+            foreach($array as $arr){
               echo '<tr id="tr_'.$arr['id'].'">';
               foreach($columns as $key => $val){
                 echo '<td id="td_'.$arr['id'].'_'.$key.'">'.$arr[$key].'</td>';
               }
               echo '<td id="tr_'.$arr['id'].'"><button data-foo="'.$arr['id'].'" id="delete_'.$arr['id'].'" class="btn btn-danger"><b>-</b></button></td>';
               echo '</tr>';
-          }?>
+            }
+          }  
+          ?>
         </tbody>
       </table>
     <?php

@@ -7,4 +7,7 @@ switch($_POST['call']){
     case 'delete_row_page_2':
         send_pg_query("DELETE FROM savitoji_varza_apskaiciuoti WHERE id = '".$_POST['id']."'");
     break;
+    case 'delete_row_page_3':
+        send_pg_query("DELETE FROM varza_apskaiciuoti WHERE id = '".$_POST['id']."'");
+    break;
 }
