@@ -1,5 +1,10 @@
-<?php include('./header.php');?>
-<?php if(isset($_GET['itampa']) && isset($_GET['stipris']) && isset($_GET['skerspjuvis']) && isset($_GET['ilgis']) && isset($_GET['result'])){
+<?php include('./header.php');
+$itampa = '';
+$stipris = '';
+$skerspjuvis = '';
+$ilgis = '';
+$result = '';
+if(isset($_GET['itampa']) && isset($_GET['stipris']) && isset($_GET['skerspjuvis']) && isset($_GET['ilgis']) && isset($_GET['result'])){
     $itampa = $_GET['itampa'];
     $stipris = $_GET['stipris'];
     $skerspjuvis = $_GET['skerspjuvis'];
@@ -15,33 +20,40 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-12">
+                <div id="alert" class="alert alert-danger" role="alert" style="display:none">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
             <div class="col-3">
-                Srovės stipris(I)
+                Srovės stipris [I(A)]
             </div>
             <div class="col-3">
-                Įtampa(U)
+                Įtampa [U(V)]
             </div>
             <div class="col-3">
-                Skerspjūvis(S)
+                Skerspjūvis [S(<span>&#13217;</span>)]
             </div>
             <div class="col-3">
-                Ilgis(l)
+                Ilgis [l(m)]
             </div>
         </div>
         <form action="savitoji_varza_submit.php" method="post">
             <div class="form-group">
                 <div class="row">
                     <div class="col-3">
-                        <input type="number" step="0.000000000001" class="required" value="<?=$stipris ?: ''?>" name="stipris" id="stipris"/> 
+                        <input type="text" class="required" value="<?=$stipris ?: ''?>" name="stipris" id="stipris"/> 
                     </div>
                     <div class="col-3">
-                        <input type="number" step="0.000000000001" class="required" value="<?=$itampa ?: ''?>" name="itampa" id="itampa"/>
+                        <input type="text" class="required" value="<?=$itampa ?: ''?>" name="itampa" id="itampa"/>
                     </div>
                     <div class="col-3">
-                        <input type="number" step="0.000000000001" class="required" value="<?=$skerspjuvis ?: ''?>" name="skerspjuvis" id="skerspjuvis"/>
+                        <input type="text" class="required" value="<?=$skerspjuvis ?: ''?>" name="skerspjuvis" id="skerspjuvis"/>
                     </div>
                     <div class="col-3">
-                        <input type="number" step="0.000000000001" class="required" value="<?=$ilgis ?: ''?>" name="ilgis" id="ilgis"/>
+                        <input type="text" class="required" value="<?=$ilgis ?: ''?>" name="ilgis" id="ilgis"/>
                     </div>
                 </div>
             </div>
@@ -99,18 +111,21 @@
 
 
 $(document).ready(function() {
-    $(document).on('click', '#submit_id', function () {
+    $(document).on('click', '#submit_id', function (e) {
         var required = false;
         $('.required').each(function() {
-            if($(this).val() == ''){
+            if($(this).val() != '' && $.isNumeric($(this).val()) && $(this).val() > 0){
+                $(this).css('background-color', 'white');
+                $('#alert').css('display', 'none');
+            }else{
                 $(this).css('background-color', 'red');
                 required = true;
-            }else{
-                $(this).css('background-color', 'white');
             }
         });
         if(required == true){
-            alert("Įveskite visus privalomus laukus");
+            $('#alert').css('display', 'block');
+            $('#alert').html("Blogi kintamieji");   
+            e.preventDefault();
         }
     });
 
