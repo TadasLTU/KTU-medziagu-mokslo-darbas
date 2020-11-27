@@ -26,7 +26,7 @@ $medziagos = mfa_kaip_array("SELECT * FROM savitosios_varzos");
         
         <div class="row">
             <div class="col-4">
-                Savitoji varža [ρ(<span>&#8486;<span>&#183;</span>m</span>)]
+                Savitoji varža [ρ(<span>&#8486;</span><span>&#183;</span>m</span>)]
             </div>
             <div class="col-4">
                 Skerspjūvis [S(<span>&#13217;</span>)]
@@ -77,7 +77,7 @@ $medziagos = mfa_kaip_array("SELECT * FROM savitosios_varzos");
         <br>
         <div class="row">
             <div class="col-12" align="center" style="display:inline">
-               <span id="result"><?php if($result == ''){ echo ' '; } else { ?> <span style="font-size:20px"><b>Varža</b></span> <?php echo ' = '.$result; } ;?></span>   
+               <span id="result"><?php if($result == ''){ echo ' '; } else { ?> <span style="font-size:20px"><b>Varža</b></span> <?php echo ' = '.$result.' <span>&#8486;</span>'; } ;?></span>   
             </div>
         </div>
         <br>
@@ -85,10 +85,10 @@ $medziagos = mfa_kaip_array("SELECT * FROM savitosios_varzos");
             <div class="col-12">
                 <?php 
                  $columns = array(
-                     'savitoji_varza' => 'Savitoji varža',
-                     'skerspjuvis' => 'Skerspjūvis',
-                     'ilgis' => 'Ilgis',
-                     'varza_result' => 'Varža'
+                     'savitoji_varza' => 'Savitoji varža (<span>&#8486;</span><span>&#183;</span>m</span>)',
+                     'skerspjuvis' => 'Skerspjūvis (<span>&#13217;</span>)',
+                     'ilgis' => 'Ilgis (m)',
+                     'varza_result' => 'Varža (<span>&#8486;</span>)'
                      
                  );
                 $sql = "SELECT * FROM varza_apskaiciuoti";

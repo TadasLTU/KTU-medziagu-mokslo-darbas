@@ -67,7 +67,7 @@ if(isset($_GET['itampa']) && isset($_GET['stipris']) && isset($_GET['skerspjuvis
         <br>
         <div class="row">
             <div class="col-12" align="center" style="display:inline">
-               <span id="result"><?php if($result == ''){ echo ' '; } else { ?> <span style="font-size:20px"><b>Savitoji varža</b></span> <?php echo ' = '.$result; } ;?></span>   
+               <span id="result"><?php if($result == ''){ echo ' '; } else { ?> <span style="font-size:20px"><b>Savitoji varža</b></span> <?php echo ' = '.$result.' <span>&#8486;</span><span>&#183;</span>m</span>'; } ;?></span>   
             </div>
         </div>
         <?php
@@ -94,11 +94,11 @@ if(isset($_GET['itampa']) && isset($_GET['stipris']) && isset($_GET['skerspjuvis
             <div class="col-12">
                 <?php 
                  $columns = array(
-                     'stipris' => 'Stipris',
-                     'itampa' => 'Įtampa',
-                     'skerspjuvis' => 'Skerspjūvis',
-                     'ilgis' => 'Ilgis',
-                     'savitoji_varza' => 'Savitoji varža'
+                     'stipris' => 'Stipris (A)',
+                     'itampa' => 'Įtampa (V)',
+                     'skerspjuvis' => 'Skerspjūvis (<span>&#13217;</span>)',
+                     'ilgis' => 'Ilgis (m)',
+                     'savitoji_varza' => 'Savitoji varža (<span>&#8486;</span><span>&#183;</span>m</span>)'
                      
                  );
                 $sql = "SELECT * FROM savitoji_varza_apskaiciuoti";
