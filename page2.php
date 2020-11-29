@@ -4,142 +4,184 @@ $stipris = '';
 $skerspjuvis = '';
 $ilgis = '';
 $result = '';
-if(isset($_GET['itampa']) && isset($_GET['stipris']) && isset($_GET['skerspjuvis']) && isset($_GET['ilgis']) && isset($_GET['result'])){
+if (isset($_GET['itampa']) && isset($_GET['stipris']) && isset($_GET['skerspjuvis']) && isset($_GET['ilgis']) && isset($_GET['result'])) {
     $itampa = $_GET['itampa'];
     $stipris = $_GET['stipris'];
     $skerspjuvis = $_GET['skerspjuvis'];
     $ilgis = $_GET['ilgis'];
     $result = $_GET['result'];
-}else{
+} else {
     $result = '';
-}?>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h4 align="center">Savitosios varžos skaičiuotuvas</h4>
-            </div>
+} ?>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h4 align="center">Savitosios varžos skaičiuotuvas</h4>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div id="alert" class="alert alert-danger" role="alert" style="display:none">
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-3">
-                Srovės stipris [I(A)]
-            </div>
-            <div class="col-3">
-                Įtampa [U(V)]
-            </div>
-            <div class="col-3">
-                Skerspjūvis [S(<span>&#13217;</span>)]
-            </div>
-            <div class="col-3">
-                Ilgis [l(m)]
-            </div>
-        </div>
-        <form action="savitoji_varza_submit.php" method="post">
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-3">
-                        <input type="text" class="required" value="<?=$stipris ?: ''?>" name="stipris" id="stipris"/> 
-                    </div>
-                    <div class="col-3">
-                        <input type="text" class="required" value="<?=$itampa ?: ''?>" name="itampa" id="itampa"/>
-                    </div>
-                    <div class="col-3">
-                        <input type="text" class="required" value="<?=$skerspjuvis ?: ''?>" name="skerspjuvis" id="skerspjuvis"/>
-                    </div>
-                    <div class="col-3">
-                        <input type="text" class="required" value="<?=$ilgis ?: ''?>" name="ilgis" id="ilgis"/>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-12" align="center">
-                    <input type="submit" id="submit_id" value="Skaičiuoti" class="btn btn-primary">    
-                </div>
-            </div>
-        </form>
-        <br>
-        <div class="row">
-            <div class="col-12" align="center" style="display:inline">
-               <span id="result"><?php if($result == ''){ echo ' '; } else { ?> <span style="font-size:20px"><b>Savitoji varža</b></span> <?php echo ' = '.$result.' <span>&#8486;</span><span>&#183;</span>m</span>'; } ;?></span>   
-            </div>
-        </div>
-        <?php
-        
-        $medziagos = mfa_kaip_array("SELECT * FROM savitosios_varzos");
-        $musu_medziaga = $medziagos[0];
-        foreach($medziagos as $medz){
-            if(abs(floatval($medz['savitoji_varza']) - floatval($result)) < abs(floatval($musu_medziaga['savitoji_varza']) - floatval($result))){
-                $musu_medziaga = $medz;
-            }
-        }
-        ?>
-        <div class="row">
-            <div class="col-12" align="center" style="display:inline">
-            <?php if($result != ''){
-                ?>
-                <span style="font-size:20px"><b>Artimiausia medžiaga</b></span><span id="result_1"><?= ' = '. $musu_medziaga['metalas'] .' ('.$musu_medziaga['savitoji_varza'].')'?></span>   
-                <?php
-            }?>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-12">
-                <?php 
-                 $columns = array(
-                     'stipris' => 'Stipris (A)',
-                     'itampa' => 'Įtampa (V)',
-                     'skerspjuvis' => 'Skerspjūvis (<span>&#13217;</span>)',
-                     'ilgis' => 'Ilgis (m)',
-                     'savitoji_varza' => 'Savitoji varža (<span>&#8486;</span><span>&#183;</span>m</span>)'
-                     
-                 );
-                $sql = "SELECT * FROM savitoji_varza_apskaiciuoti";
-                autosearch($sql, $columns);?>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div id="alert" class="alert alert-danger" role="alert" style="display:none">
             </div>
         </div>
     </div>
-    <?php include('./footer.php');?>
-<script>
 
+    <div class="row">
+        <div class="col-3">
+            Srovės stipris [I(A)]
+        </div>
+        <div class="col-3">
+            Įtampa [U(V)]
+        </div>
+        <div class="col-3">
+            Skerspjūvis [S(<span>&#13217;</span>)]
+        </div>
+        <div class="col-3">
+            Ilgis [l(m)]
+        </div>
+    </div>
+    <form action="savitoji_varza_submit.php" method="post">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-3">
+                    <input type="text" class="required" value="<?= $stipris ?: '' ?>" name="stipris" id="stipris" />
+                </div>
+                <div class="col-3">
+                    <input type="text" class="required" value="<?= $itampa ?: '' ?>" name="itampa" id="itampa" />
+                </div>
+                <div class="col-3">
+                    <input type="text" class="required" value="<?= $skerspjuvis ?: '' ?>" name="skerspjuvis" id="skerspjuvis" />
+                </div>
+                <div class="col-3">
+                    <input type="text" class="required" value="<?= $ilgis ?: '' ?>" name="ilgis" id="ilgis" />
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12" align="center">
+                <input type="submit" id="submit_id" value="Skaičiuoti" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
+    <br>
+    <div class="row">
+        <div class="col-12" align="center" style="display:inline">
+            <span id="result"><?php if ($result == '') {
+                                    echo ' ';
+                                } else { ?> <span style="font-size:20px"><b>Savitoji varža</b></span> <?php echo ' = ' . $result . ' <span>&#8486;</span><span>&#183;</span>m</span>';
+                                                                                                    }; ?></span>
+        </div>
+    </div>
+    <?php
 
-$(document).ready(function() {
-    $(document).on('click', '#submit_id', function (e) {
-        var required = false;
-        $('.required').each(function() {
-            if($(this).val() != '' && $.isNumeric($(this).val()) && $(this).val() > 0){
-                $(this).css('background-color', 'white');
-                $('#alert').css('display', 'none');
-            }else{
-                $(this).css('background-color', 'red');
-                required = true;
-            }
-        });
-        if(required == true){
-            $('#alert').css('display', 'block');
-            $('#alert').html("Blogi kintamieji");   
-            e.preventDefault();
+    $medziagos = mfa_kaip_array("SELECT * FROM savitosios_varzos");
+    $musu_medziaga = $medziagos[0];
+    foreach ($medziagos as $medz) {
+        if (abs(floatval($medz['savitoji_varza']) - floatval($result)) < abs(floatval($musu_medziaga['savitoji_varza']) - floatval($result))) {
+            $musu_medziaga = $medz;
         }
-    });
+    }
+    ?>
+    <?php
+    $data = mfa_kaip_array("SELECT * FROM savitoji_varza_apskaiciuoti ORDER BY ilgis ASC");
+    $i = 0;
+    foreach ($data as $record) {
+        $varza = $record['itampa'] / $record['stipris'];
+        $ilgis = $record['ilgis'];
 
-    $(document).on('click', '[id^="delete_"]', function() {
-        var id = ($(this).attr('data-foo'));
-        $.ajax({
-            url:"ajax_calls.php",    //the page containing php script
-            type: "post",    //request type,
-            data: {id: id, 'call' : 'delete_row_page_2'},
-            success:function(result){
-                location.reload();
+        $dataPoints[$i]["y"] = $ilgis;
+        $dataPoints[$i]["label"] = $varza;
+        $i++;
+    }
+    //print_r($dataPoints);
+    ?>
+    <div class="row">
+        <div class="col-12" align="center" style="display:inline">
+            <?php if ($result != '') {
+            ?>
+                <span style="font-size:20px"><b>Artimiausia medžiaga</b></span><span id="result_1"><?= ' = ' . $musu_medziaga['metalas'] . ' (' . $musu_medziaga['savitoji_varza'] . ')' ?></span>
+            <?php
+            } ?>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-12">
+            <?php
+            $columns = array(
+                'stipris' => 'Stipris (A)',
+                'itampa' => 'Įtampa (V)',
+                'skerspjuvis' => 'Skerspjūvis (<span>&#13217;</span>)',
+                'ilgis' => 'Ilgis (m)',
+                'savitoji_varza' => 'Savitoji varža (<span>&#8486;</span><span>&#183;</span>m</span>)'
+
+            );
+            $sql = "SELECT * FROM savitoji_varza_apskaiciuoti";
+            autosearch($sql, $columns); ?>
+        </div>
+    </div>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+</div>
+
+<?php include('./footer.php'); ?>
+<script>
+    $(document).ready(function() {
+        $(document).on('click', '#submit_id', function(e) {
+            var required = false;
+            $('.required').each(function() {
+                if ($(this).val() != '' && $.isNumeric($(this).val()) && $(this).val() > 0) {
+                    $(this).css('background-color', 'white');
+                    $('#alert').css('display', 'none');
+                } else {
+                    $(this).css('background-color', 'red');
+                    required = true;
+                }
+            });
+            if (required == true) {
+                $('#alert').css('display', 'block');
+                $('#alert').html("Blogi kintamieji");
+                e.preventDefault();
             }
         });
+
+        $(document).on('click', '[id^="delete_"]', function() {
+            var id = ($(this).attr('data-foo'));
+            $.ajax({
+                url: "ajax_calls.php", //the page containing php script
+                type: "post", //request type,
+                data: {
+                    id: id,
+                    'call': 'delete_row_page_2'
+                },
+                success: function(result) {
+                    location.reload();
+                }
+            });
+        });
     });
-});
-    
 </script>
+<script>
+    window.onload = function() {
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+            title: {
+                text: "Varžos priklausomybė nuo laido ilgio"
+            },
+            axisY: {
+                title: "Laido ilgis",
+            },
+            axisX: {
+                title: "Varža",
+            },
+
+            data: [{
+                type: "line",
+                dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+            }]
+        });
+        chart.render();
+
+    }
+</script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
