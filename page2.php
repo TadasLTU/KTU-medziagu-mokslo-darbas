@@ -83,19 +83,7 @@ if (isset($_GET['itampa']) && isset($_GET['stipris']) && isset($_GET['skerspjuvi
         }
     }
     ?>
-    <?php
-    $data = mfa_kaip_array("SELECT * FROM savitoji_varza_apskaiciuoti ORDER BY ilgis ASC");
-    $i = 0;
-    foreach ($data as $record) {
-        $varza = $record['itampa'] / $record['stipris'];
-        $ilgis = $record['ilgis'];
 
-        $dataPoints[$i]["y"] = $ilgis;
-        $dataPoints[$i]["label"] = $varza;
-        $i++;
-    }
-    //print_r($dataPoints);
-    ?>
     <div class="row">
         <div class="col-12" align="center" style="display:inline">
             <?php if ($result != '') {
@@ -121,7 +109,6 @@ if (isset($_GET['itampa']) && isset($_GET['stipris']) && isset($_GET['skerspjuvi
             autosearch($sql, $columns); ?>
         </div>
     </div>
-    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 </div>
 
 <?php include('./footer.php'); ?>
@@ -161,27 +148,3 @@ if (isset($_GET['itampa']) && isset($_GET['stipris']) && isset($_GET['skerspjuvi
         });
     });
 </script>
-<script>
-    window.onload = function() {
-
-        var chart = new CanvasJS.Chart("chartContainer", {
-            title: {
-                text: "Varžos priklausomybė nuo laido ilgio"
-            },
-            axisY: {
-                title: "Laido ilgis",
-            },
-            axisX: {
-                title: "Varža",
-            },
-
-            data: [{
-                type: "line",
-                dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-            }]
-        });
-        chart.render();
-
-    }
-</script>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
