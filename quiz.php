@@ -109,18 +109,18 @@
                 var className = "col-md-" + 12/totalAnswers;
                 var row = $("<div>").addClass("row py-4 px-5");
                 (q.answers).forEach( answ => {
-                    var radioButton = $("<input type='radio' name='" + q.question_id + "' value='" + answ.id + "' id='" + answ.id + "'>").addClass("mr-1");
-                    var label = $("<label for='" + answ.id + "'>").html(" " + answ.answer);
-                    var answer = $("<div name='" + answ.id + "'>").addClass(className).append(radioButton).append(label);
+                    var radioButton = $("<input type='radio' name='" + q.question_id + "' value='" + answ.id + "' id='" + answ.id + "'>");
+                    var label = $("<label for='" + answ.id + "'>").addClass("ml-3 overflow-auto py-2 mb-1").html(" " + answ.answer);
+                    var answer = $("<div name='" + answ.id + "'>").addClass(className).addClass("d-flex align-items-center").append(radioButton).append(label);
                     row.append(answer);
                 });
                 collapse.append(row);
             } else {
                 var container = $("<div>").addClass("py-4 px-5");
                 (q.answers).forEach( answ => {
-                    var radioButton = $("<input type='radio' name='" + q.question_id + "' value='" + answ.id + "' id='" + answ.id + "'>").addClass("mr-1");
-                    var label = $("<label for='" + answ.id + "'>").html(" " + answ.answer);
-                    var answer = $("<div name='" + answ.id + "'>").append(radioButton).append(label);
+                    var radioButton = $("<input type='radio' name='" + q.question_id + "' value='" + answ.id + "' id='" + answ.id + "'>");
+                    var label = $("<label for='" + answ.id + "'>").addClass("ml-3 overflow-auto py-2 mb-1").html(" " + answ.answer);
+                    var answer = $("<div name='" + answ.id + "'>").addClass("d-flex align-items-center").append(radioButton).append(label);
                     container.append(answer);
                 });
                 collapse.append(container);
@@ -191,8 +191,8 @@
                 $("#spinnerContainer").addClass("h-0");
                 $("#spinnerContainer").addClass("d-none");
             } else {
-                $("#spinnerContainer").removeClass("h-0");
                 $("#spinnerContainer").addClass("d-flex");
+                $("#spinnerContainer").removeClass("h-0");
                 $("#spinnerContainer").addClass("h-75");
                 $("#spinnerContainer").removeClass("d-none");
             }
