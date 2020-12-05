@@ -13,18 +13,6 @@ $medziagos = mfa_kaip_array("SELECT * FROM savitosios_varzos");
 ?>
 <?php
 $selectOptions = mfa_kaip_array("SELECT DISTINCT skerspjuvis, savitoji_varza FROM varza_apskaiciuoti");
-print_r($selectOptions);
-$data = mfa_kaip_array("SELECT * FROM savitoji_varza_apskaiciuoti ORDER BY ilgis ASC");
-$i = 0;
-foreach ($data as $record) {
-    $varza = $record['itampa'] / $record['stipris'];
-    $ilgis = $record['ilgis'];
-
-    $dataPoints[$i]["y"] = $ilgis;
-    $dataPoints[$i]["label"] = $varza;
-    $i++;
-}
-//print_r($dataPoints);
 ?>
 <div class="container">
     <div class="row">
@@ -122,7 +110,7 @@ foreach ($data as $record) {
             <select id="graph_options">
                 <?php
                 foreach ($selectOptions as $option) {
-                    echo '<option>' . 'S=' . $option['skerspjuvis'] . ';' . '&Rho;=' . $option['savitoji_varza'] . '</option>';
+                    echo '<option data-skerspjuvis="' . $option['skerspjuvis'] . '" data-varza="' . $option['savitoji_varza'] . '">' . 'S=' . $option['skerspjuvis'] . ';' . '&Rho;=' . $option['savitoji_varza'] . '</option>';
                 }
                 ?>
             </select>
@@ -166,34 +154,100 @@ foreach ($data as $record) {
                 }
             });
         });
+        window.onload = function() {
+            console.log('on load')
+            var select = document.getElementById("graph_options");
+            var skerspjuvis = $(select).find(':selected').data('skerspjuvis');
+            var savitoji_varza = $(select).find(':selected').data('varza');
+            $.ajax({
+                url: "ajax_calls.php", //the page containing php script
+                type: "post", //request type,
+                data: {
+                    svarza: savitoji_varza,
+                    skerspj: skerspjuvis,
+                    'call': 'select_graph_data_page_3'
+                },
+                success: function(result) {
+                    console.log(result);
+                    var datapoints = [];
+                    var data = JSON.parse(result);
+                    for (let i = 0; i < data.length; i++) {
+                        const element = data[i];
+                        datapoints.push({
+                            label: data[i]["varza"],
+                            y: Number(data[i]["ilgis"])
+                        });
+                    }
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                        title: {
+                            text: "Varžos priklausomybės nuo laido ilgio grafikas"
+                        },
+                        axisX: {
+                            title: "varža"
+                        },
+                        axisY: {
+                            title: "laido ilgis"
+                        },
+                        data: [{
+                            type: "line",
+                            dataPoints: datapoints
+                        }]
+                    });
 
+                    chart.render();
+                    console.log(datapoints);
+                }
+            });
+        }
+        $("#graph_options").change(function() {
+            var skerspjuvis = $(this).find(':selected').data('skerspjuvis');
+            var savitoji_varza = $(this).find(':selected').data('varza');
+            $.ajax({
+                url: "ajax_calls.php", //the page containing php script
+                type: "post", //request type,
+                data: {
+                    svarza: savitoji_varza,
+                    skerspj: skerspjuvis,
+                    'call': 'select_graph_data_page_3'
+                },
+                success: function(result) {
+                    console.log(result);
+                    var datapoints = [];
+                    var data = JSON.parse(result);
+                    for (let i = 0; i < data.length; i++) {
+                        const element = data[i];
+                        datapoints.push({
+                            label: data[i]["varza"],
+                            y: Number(data[i]["ilgis"])
+                        });
+                    }
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                        title: {
+                            text: "Varžos priklausomybės nuo laido ilgio grafikas"
+                        },
+                        axisX: {
+                            title: "varža"
+                        },
+                        axisY: {
+                            title: "laido ilgis"
+                        },
+                        data: [{
+                            type: "line",
+                            dataPoints: datapoints
+                        }]
+                    });
+
+                    chart.render();
+                    console.log(datapoints);
+                }
+            });
+
+
+        });
         $(document).on('change', '#select_medziaga', function() {
             var id = ($("#select_medziaga :selected").attr('data-foo'));
             $('#savit_varza').val(id);
         });
     });
-</script>
-<script>
-    window.onload = function() {
-
-        var chart = new CanvasJS.Chart("chartContainer", {
-            title: {
-                text: "Varžos priklausomybė nuo laido ilgio"
-            },
-            axisY: {
-                title: "Laido ilgis",
-            },
-            axisX: {
-                title: "Varža",
-            },
-
-            data: [{
-                type: "line",
-                dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-            }]
-        });
-        chart.render();
-
-    }
 </script>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
