@@ -17,10 +17,10 @@
                         <a class="nav-link" href="./page1.php">Laboratorinio aprašas <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./page2.php">Skaičiuotuvas</a>
+                        <a class="nav-link" href="./page2.php">Savitosios varžos skaičiuotuvas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./page3.php">Page 3</a>
+                        <a class="nav-link" href="./page3.php">Varžos skaičiuotuvas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./quiz.php">Klausimynas</a>
