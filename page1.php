@@ -189,7 +189,7 @@
 .p55{text-align: left;padding-left: 36px;margin-top: 18px;margin-bottom: 0px;}
 .p56{text-align: left;padding-left: 8px;margin-top: 9px;margin-bottom: 0px;}
 
-/* .td0{padding: 0px;margin: 0px;width: 564px;vertical-align: bottom;}
+.td0{padding: 0px;margin: 0px;width: 564px;vertical-align: bottom;}
 .td1{padding: 0px;margin: 0px;width: 107px;vertical-align: bottom;}
 .td2{padding: 0px;margin: 0px;width: 216px;vertical-align: bottom;}
 .td3{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 14px;vertical-align: bottom;}
@@ -273,7 +273,7 @@
 .t1{width: 451px;margin-left: 191px;margin-top: 16px;font: italic 16px 'Times New Roman';}
 .t2{width: 452px;margin-left: 190px;margin-top: 6px;font: 16px 'Times New Roman';}
 .t3{width: 688px;margin-top: 7px;font: 16px 'Times New Roman';}
-.t4{width: 688px;margin-top: 3px;font: 15px 'Times New Roman';} */
+.t4{width: 688px;margin-top: 3px;font: 15px 'Times New Roman';} 
 
 </style>
 <div id="page_1">
