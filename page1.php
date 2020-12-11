@@ -347,7 +347,7 @@
 <table cellpadding="0" cellspacing="0" class="t1">
 <tbody><tr>
 	<td rowspan="2" class="tr13 td12"><p class="p7 ft2"><span class="ft10">R </span>= ρ</p></td>
-	<td class="tr14 td11"><p class="p20 ft15"></p></td>
+	<td class="tr14 td11"><p class="p20 ft15">l</p></td>
 	<td rowspan="2" class="tr13 td13"><p class="p21 ft2">.</p></td>
 	<td rowspan="2" class="tr13 td14"><p class="p22 ft2">(3)</p></td>
 </tr>
