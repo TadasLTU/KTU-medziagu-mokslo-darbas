@@ -278,7 +278,7 @@ body {margin-top: 0px;margin-left: 0px;}
 </style>
 <div id="page_1">
 <div id="id1_1">
-<p class="p0 ft0">LAIDININKO SAVITOSIOS VARŽOS NUSTATYMAS</p>
+<!-- <p class="p0 ft0">LAIDININKO SAVITOSIOS VARŽOS NUSTATYMAS</p> -->
 <p class="p1 ft2"><span class="ft1">Darbo užduotis</span>. Nustatyti laidininko savitąja varžą remiantis Omo dėsniu.</p>
 <p class="p2 ft2"><span class="ft1">Teorinio pasirengimo klausimai</span>. Klasikinės elektroninės metalų elektrinio laidumo teorijos</p>
 <p class="p3 ft2">pagrindai. Laidininko ominė varža. Savitoji varža.</p>
