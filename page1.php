@@ -22,11 +22,12 @@
         ?>
     </div>
 
-    <div class="col-md-4"> <h1 style="text-align: center;">Laidininko savitosios varžos nustatymas</h1>
+    <h1 style="text-align: center;">Laidininko savitosios varžos nustatymas</h1>
     <p style="text-align: center;">Laboratorinio darbo apra&scaron;ymas</p>
 
     <div class="row">
     <div class="col-sm-4">.col-sm-4</div>
+    <div class="col-md-4">
         <p style="text-align: left;">&nbsp;</p>
         <p><strong>Darbo užduotis.</strong> Nustatyti laidininko savitąja varžą remiantis Omo dėsniu.</p>
         <p><strong>Teorinio pasirengimo klausimai</strong>. Klasikinės elektroninės metalų elektrinio laidumo teorijos pagrindai. Laidininko ominė varža. Savitoji varža.</p>
