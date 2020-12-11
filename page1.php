@@ -52,14 +52,14 @@
 <div style="text-align: center;">
 <style type="text/css">
 
-body {margin-top: 0px;margin-left: 0px;}
-
+/* body {margin-top: 0px;margin-left: 0px;} */
+/* 
 #page_1 {position:relative; overflow: hidden;margin: 58px 0px 12px 76px;padding: 0px;border: none;width: 718px;}
 #page_1 #id1_1 {border:none;margin: 0px 0px 0px 0px;padding: 0px;border:none;width: 718px;overflow: hidden;}
 #page_1 #id1_2 {border:none;margin: 188px 0px 0px 185px;padding: 0px;border:none;width: 533px;overflow: hidden;}
 
 #page_1 #p1dimg1 {position:absolute;top:251px;left:216px;z-index:-1;width:411px;height:606px;}
-#page_1 #p1dimg1 #p1img1 {width:411px;height:606px;}
+#page_1 #p1dimg1 #p1img1 {width:411px;height:606px;} */
 
 #page_1 #p1inl_img1 {position:relative;width:2px;height:10px;}
 #page_1 #p1inl_img2 {position:relative;width:4px;height:28px;}
@@ -69,13 +69,13 @@ body {margin-top: 0px;margin-left: 0px;}
 #page_1 #p1inl_img6 {position:relative;width:5px;height:30px;}
 
 
-
+/* 
 #page_2 {position:relative; overflow: hidden;margin: 38px 0px 12px 68px;padding: 0px;border: none;width: 726px;}
 #page_2 #id2_1 {border:none;margin: 0px 0px 0px 0px;padding: 0px;border:none;width: 726px;overflow: hidden;}
 #page_2 #id2_2 {border:none;margin: 26px 0px 0px 193px;padding: 0px;border:none;width: 533px;overflow: hidden;}
 
 #page_2 #p2dimg1 {position:absolute;top:772px;left:687px;z-index:-1;width:1px;height:1px;font-size: 1px;line-height:nHeight;}
-#page_2 #p2dimg1 #p2img1 {width:1px;height:1px;}
+#page_2 #p2dimg1 #p2img1 {width:1px;height:1px;} */
 
 
 
@@ -189,7 +189,7 @@ body {margin-top: 0px;margin-left: 0px;}
 .p55{text-align: left;padding-left: 36px;margin-top: 18px;margin-bottom: 0px;}
 .p56{text-align: left;padding-left: 8px;margin-top: 9px;margin-bottom: 0px;}
 
-.td0{padding: 0px;margin: 0px;width: 564px;vertical-align: bottom;}
+/* .td0{padding: 0px;margin: 0px;width: 564px;vertical-align: bottom;}
 .td1{padding: 0px;margin: 0px;width: 107px;vertical-align: bottom;}
 .td2{padding: 0px;margin: 0px;width: 216px;vertical-align: bottom;}
 .td3{border-bottom: #000000 1px solid;padding: 0px;margin: 0px;width: 14px;vertical-align: bottom;}
@@ -273,7 +273,7 @@ body {margin-top: 0px;margin-left: 0px;}
 .t1{width: 451px;margin-left: 191px;margin-top: 16px;font: italic 16px 'Times New Roman';}
 .t2{width: 452px;margin-left: 190px;margin-top: 6px;font: 16px 'Times New Roman';}
 .t3{width: 688px;margin-top: 7px;font: 16px 'Times New Roman';}
-.t4{width: 688px;margin-top: 3px;font: 15px 'Times New Roman';}
+.t4{width: 688px;margin-top: 3px;font: 15px 'Times New Roman';} */
 
 </style>
 <div id="page_1">
