@@ -26,8 +26,8 @@
     <p style="text-align: center;">Laboratorinio darbo apra&scaron;ymas</p>
 
     <div class="row">
-    <div class="col-sm-4">.col-sm-4</div>
-    <div class="col-md-4">
+    <div class="col-sm-2">.col-sm-4</div>
+    <div class="col-md-8">
         <p style="text-align: left;">&nbsp;</p>
         <p><strong>Darbo užduotis.</strong> Nustatyti laidininko savitąja varžą remiantis Omo dėsniu.</p>
         <p><strong>Teorinio pasirengimo klausimai</strong>. Klasikinės elektroninės metalų elektrinio laidumo teorijos pagrindai. Laidininko ominė varža. Savitoji varža.</p>
@@ -39,9 +39,9 @@
         <p>Taigi pagal ją dydis , o tuo pačiu ir varža R, turėtų kisti proporcingai T .</p>
         <p>Darbo apra&scaron;ymas. Laboratorinio darbo maketą sudaro maitinimo &scaron;altinis 1, multimetras, 2, skirtingų medžiagų bandiniai 3. Bendras darbo vaizdas pateiktas 1 pav. Medžiagų bandiniai yra: skirtingo skersmens varinė viela; skirtingo ilgio plieninė viela. Matavimus su jais rekomenduojama atlikti poromis, t.y. varis ir plienas.</p>
         <p>Darbo eiga. 1. Maitinimo &scaron;altinio srovės rankenėles nustatome į mažiausios srovės padėtį (iki galo prie&scaron; laikrodžio rodyklę). Įtampos rankenėles į didžiausios įtampos padėtį (iki galo pagal laikrodžio rodyklę). 2. Laboratoriniais krokodilais prie matavimo sistemos prijungiame pirmąjį pasirinktą bandinį. 3. Įjungiame maitinimo &scaron;altinį ir multimetrą. Multimetrą nustatome į įtampos (mV) matavimo režimą. Srovė atskaitoma &scaron;altinio indikatoriuje; įtampa multimetre. 4. Nustatome pasirinktas (arba dėstytojo nurodytas) srovės vertes ir atitinkamas įtampos vertes įra&scaron;ome į 1 lentelę. Pasižymime bandinio parametrus 5. Matavimus pakartojame su likusiais bandiniais 1 lentelė. U, mV I, A R, Ω U, mV I, A R, Ω U, mV I, A R, Ω U, mV I, A R, Ω 6. Apskaičiuojame eksperimentines bandinių savitąsias varžas &lt;&rho;eks&gt; (3 formulė) naudojant vidutinę bandinio varžos vertę . Palyginame su teorinėmis bandinių savitosiomis varžomis, apskaičiuojame santykinę paklaidą &delta;. &lt;&rho;eks&gt; &rho;teor &delta; &lt;&rho;eks&gt; &rho;teor &delta; &lt;&rho;eks&gt; &rho;teor &delta; &lt;&rho;eks&gt; &rho;teor &delta;</p>
-        <p>Kontroliniai klausimai</p>
-        <p>1. Kokie svarbiausi klasikinės elektroninės metalų elektrinio laidumo teorijos teiginiai ? <br />2. Nuo ko priklauso metalų savitoji elektrinė varža pagal kvantinę teoriją ?<br />3. Kokia bendroji laidininko ominės varžos formulė ?</p>
+        <!-- <p>Kontroliniai klausimai</p> -->
+        <!-- <p>1. Kokie svarbiausi klasikinės elektroninės metalų elektrinio laidumo teorijos teiginiai ? <br />2. Nuo ko priklauso metalų savitoji elektrinė varža pagal kvantinę teoriją ?<br />3. Kokia bendroji laidininko ominės varžos formulė ?</p> -->
     </div>
-    <div class="col-sm-4">.col-sm-4</div>
+    <div class="col-sm-2">.col-sm-4</div>
     </div>
 <?php include('./footer.php');?>
