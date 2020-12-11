@@ -276,9 +276,6 @@ body {margin-top: 0px;margin-left: 0px;}
 .t4{width: 688px;margin-top: 3px;font: 15px 'Times New Roman';}
 
 </style>
-</head>
-
-<body>
 <div id="page_1">
 <div id="id1_1">
 <p class="p0 ft0">LAIDININKO SAVITOSIOS VARŽOS NUSTATYMAS</p>
