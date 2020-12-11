@@ -26,7 +26,7 @@
     <p style="text-align: center;">Laboratorinio darbo apra&scaron;ymas</p>
 
     <div class="row">
-    <div class="col-sm-2">.col-sm-4</div>
+    <div class="col-sm-2"></div>
     <div class="col-md-8">
         <p style="text-align: left;">&nbsp;</p>
         <p><strong>Darbo užduotis.</strong> Nustatyti laidininko savitąja varžą remiantis Omo dėsniu.</p>
@@ -42,6 +42,6 @@
         <!-- <p>Kontroliniai klausimai</p> -->
         <!-- <p>1. Kokie svarbiausi klasikinės elektroninės metalų elektrinio laidumo teorijos teiginiai ? <br />2. Nuo ko priklauso metalų savitoji elektrinė varža pagal kvantinę teoriją ?<br />3. Kokia bendroji laidininko ominės varžos formulė ?</p> -->
     </div>
-    <div class="col-sm-2">.col-sm-4</div>
+    <div class="col-sm-2"></div>
     </div>
 <?php include('./footer.php');?>
