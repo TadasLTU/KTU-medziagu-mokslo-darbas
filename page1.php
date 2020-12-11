@@ -49,7 +49,7 @@
         <!-- <p>Kontroliniai klausimai</p> -->
         <!-- <p>1. Kokie svarbiausi klasikinės elektroninės metalų elektrinio laidumo teorijos teiginiai ? <br />2. Nuo ko priklauso metalų savitoji elektrinė varža pagal kvantinę teoriją ?<br />3. Kokia bendroji laidininko ominės varžos formulė ?</p> -->
     
-
+<div style="text-align: center;">
 <style type="text/css">
 
 body {margin-top: 0px;margin-left: 0px;}
@@ -398,6 +398,7 @@ body {margin-top: 0px;margin-left: 0px;}
 </div>
 </div>
 
+        </div>
 </div>
     <div class="col-sm-2"></div>
     </div>
