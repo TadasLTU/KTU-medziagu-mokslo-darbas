@@ -279,8 +279,8 @@ body {margin-top: 0px;margin-left: 0px;}
 </head>
 
 <body>
-<div id="page_1">
-<div id="id1_1">
+<!-- <div id="page_1">
+<div id="id1_1"> -->
 <p class="p0 ft0">LAIDININKO SAVITOSIOS VARŽOS NUSTATYMAS</p>
 <p class="p1 ft2"><span class="ft1">Darbo užduotis</span>. Nustatyti laidininko savitąja varžą remiantis Omo dėsniu.</p>
 <p class="p2 ft2"><span class="ft1">Teorinio pasirengimo klausimai</span>. Klasikinės elektroninės metalų elektrinio laidumo teorijos</p>
@@ -376,13 +376,10 @@ body {margin-top: 0px;margin-left: 0px;}
 </tr>
 </tbody></table>
 <p class="p25 ft33">čia <span class="ft30">m</span><span class="ft31">e </span>– elektrono masė, <span class="ft30">e </span>– jo krūvis, <span class="ft30">n </span>– valentinių (laisvųjų) elektronų koncentracija, &lt; λ &gt; – vidutinis elektrono laisvojo kelio ilgis. Nė vienas šių dydžių nepriklauso nuo elektrinio lauko stiprio, o tuo pačiu nuo įtampos. Pagal šią teoriją tik dydis &lt; <span class="ft32">v </span>&gt; priklauso nuo temperatūros ir yra proporcingas <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAF0lEQVQImQXBAQEAAACCIPo/2mAVGIIDNPgD/3SjITwAAAAASUVORK5CYII=" id="p1inl_img3"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAUCAYAAABF5ffbAAAAOElEQVQYla2OuQ0AIAzEYvbf2VRIkBQIkSut+1Aja2QAWGBxAqrcnR9wjXR17n2dP3cREcfIW3wC6cIUI7O78aoAAAAASUVORK5CYII=" id="p1inl_img4"><span class="ft30"> T </span>. Taigi pagal ją dydis ρ, o tuo pačiu ir varža <span class="ft30">R</span>, turėtų kisti proporcingai <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAF0lEQVQImQXBAQEAAACCIPo/2mAVGIIDNPgD/3SjITwAAAAASUVORK5CYII=" id="p1inl_img5"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAUCAYAAABF5ffbAAAAOElEQVQYla2OuQ0AIAzEYvbf2VRIkBQIkSut+1Aja2QAWGBxAqrcnR9wjXR17n2dP3cREcfIW3wC6cIUI7O78aoAAAAASUVORK5CYII=" id="p1inl_img6"><span class="ft30"> T </span>.</p>
-</div>
-<div id="id1_2">
-</div>
-</div>
-<div id="page_2">
 
-<div id="id2_1">
+<!-- <div id="page_2">
+
+<div id="id2_1"> -->
 
 <p class="p28 ft36"><span class="ft35">Darbo aprašymas. </span>Laboratorinio darbo maketą sudaro maitinimo šaltinis 1, multimetras, 2, skirtingų medžiagų bandiniai 3. Bendras darbo vaizdas pateiktas 1 pav.</p>
 <p class="p29 ft36">Medžiagų bandiniai yra: skirtingo skersmens varinė viela; skirtingo ilgio plieninė viela. Matavimus su jais rekomenduojama atlikti poromis, t.y. varis ir plienas.</p>
@@ -399,10 +396,10 @@ body {margin-top: 0px;margin-left: 0px;}
 <p class="p56 ft2"><span class="ft2">1.</span><span class="ft49">Kokie svarbiausi klasikinės elektroninės metalų elektrinio laidumo teorijos teiginiai ?</span></p>
 <p class="p36 ft2"><span class="ft2">2.</span><span class="ft49">Nuo ko priklauso metalų savitoji elektrinė varža pagal kvantinę teoriją ?</span></p>
 <p class="p56 ft2"><span class="ft2">3.</span><span class="ft49">Kokia bendroji laidininko ominės varžos formulė ?</span></p> -->
-</div>
+<!-- </div> -->
 <div id="id2_2">
 </div>
-</div>
+<!-- </div> -->
 
 
 </body></html>
