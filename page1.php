@@ -279,8 +279,8 @@ body {margin-top: 0px;margin-left: 0px;}
 </head>
 
 <body>
-<!-- <div id="page_1">
-<div id="id1_1"> -->
+<div id="page_1">
+<div id="id1_1">
 <p class="p0 ft0">LAIDININKO SAVITOSIOS VARŽOS NUSTATYMAS</p>
 <p class="p1 ft2"><span class="ft1">Darbo užduotis</span>. Nustatyti laidininko savitąja varžą remiantis Omo dėsniu.</p>
 <p class="p2 ft2"><span class="ft1">Teorinio pasirengimo klausimai</span>. Klasikinės elektroninės metalų elektrinio laidumo teorijos</p>
@@ -396,13 +396,10 @@ body {margin-top: 0px;margin-left: 0px;}
 <p class="p56 ft2"><span class="ft2">1.</span><span class="ft49">Kokie svarbiausi klasikinės elektroninės metalų elektrinio laidumo teorijos teiginiai ?</span></p>
 <p class="p36 ft2"><span class="ft2">2.</span><span class="ft49">Nuo ko priklauso metalų savitoji elektrinė varža pagal kvantinę teoriją ?</span></p>
 <p class="p56 ft2"><span class="ft2">3.</span><span class="ft49">Kokia bendroji laidininko ominės varžos formulė ?</span></p> -->
-<!-- </div> -->
+</div>
 <div id="id2_2">
 </div>
-<!-- </div> -->
-
-
-</body></html>
+</div>
 
 
     <div class="col-sm-2"></div>
