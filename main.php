@@ -1,5 +1,6 @@
 <h1 style="text-align: center;">Medžiagų mokslo projektinis darbas</h1>
 <p>&Scaron;io projektinio darbo tikslas integruoti fizikos laboratorijoje atliktą darbą su mūsų studijuojama sritimi</p>
+<p>Darbo &scaron;altinio kodą galite rasti <a title="https://github.com/TadasLTU/KTU-medziagu-mokslo-darbas" href="https://github.com/TadasLTU/KTU-medziagu-mokslo-darbas">čia</a></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>Darbą rengė:</p>
