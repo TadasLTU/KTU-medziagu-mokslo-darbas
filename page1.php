@@ -381,12 +381,9 @@ body {margin-top: 0px;margin-left: 0px;}
 </div>
 </div>
 <div id="page_2">
-<div id="p2dimg1">
-<img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAABAAEDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5/ooooA//2Q==" id="p2img1"></div>
-
 
 <div id="id2_1">
-<p class="p27 ft21">2</p>
+
 <p class="p28 ft36"><span class="ft35">Darbo aprašymas. </span>Laboratorinio darbo maketą sudaro maitinimo šaltinis 1, multimetras, 2, skirtingų medžiagų bandiniai 3. Bendras darbo vaizdas pateiktas 1 pav.</p>
 <p class="p29 ft36">Medžiagų bandiniai yra: skirtingo skersmens varinė viela; skirtingo ilgio plieninė viela. Matavimus su jais rekomenduojama atlikti poromis, t.y. varis ir plienas.</p>
 <p class="p30 ft1">Darbo eiga.</p>
