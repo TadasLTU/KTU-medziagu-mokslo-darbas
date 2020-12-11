@@ -316,7 +316,7 @@
 </tr>
 <tr>
 	<td class="tr7 td2"><p class="p7 ft11">&nbsp;</p></td>
-	<td class="tr7 td4"><p class="p14 ft15"></p></td>
+	<td class="tr7 td4"><p class="p14 ft15">l</p></td>
 	<td class="tr7 td7"><p class="p7 ft11">&nbsp;</p></td>
 	<td class="tr7 td8"><p class="p12 ft16">ρ</p></td>
 	<td class="tr7 td5"><p class="p7 ft11">&nbsp;</p></td>
@@ -327,7 +327,7 @@
 	<td colspan="2" rowspan="2" class="tr0 td10"><p class="p8 ft10">R <span class="ft2">= </span><span class="ft17">∫</span></p></td>
 	<td class="tr8 td7"><p class="p7 ft18">&nbsp;</p></td>
 	<td class="tr9 td11"><p class="p7 ft19">&nbsp;</p></td>
-	<td rowspan="2" class="tr0 td5"><p class="p15 ft21">d <span class="ft20"></span></p></td>
+	<td rowspan="2" class="tr0 td5"><p class="p15 ft21">d <span class="ft20">l</span></p></td>
 	<td rowspan="2" class="tr0 td6"><p class="p16 ft2">;</p></td>
 	<td rowspan="2" class="tr0 td1"><p class="p11 ft2">(2)</p></td>
 </tr>
