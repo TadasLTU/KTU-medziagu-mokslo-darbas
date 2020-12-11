@@ -48,7 +48,7 @@
         <p>6. Apskaičiuojame eksperimentines bandinių savitąsias varžas &lt;&rho;eks&gt; (3 formulė) naudojant vidutinę bandinio varžos vertę . Palyginame su teorinėmis bandinių savitosiomis varžomis, apskaičiuojame santykinę paklaidą &delta;. &lt;&rho;eks&gt; &rho;teor &delta; &lt;&rho;eks&gt; &rho;teor &delta; &lt;&rho;eks&gt; &rho;teor &delta; &lt;&rho;eks&gt; &rho;teor &delta;</p> -->
         <!-- <p>Kontroliniai klausimai</p> -->
         <!-- <p>1. Kokie svarbiausi klasikinės elektroninės metalų elektrinio laidumo teorijos teiginiai ? <br />2. Nuo ko priklauso metalų savitoji elektrinė varža pagal kvantinę teoriją ?<br />3. Kokia bendroji laidininko ominės varžos formulė ?</p> -->
-    </div>
+    
 
 <style type="text/css">
 
@@ -398,7 +398,7 @@ body {margin-top: 0px;margin-left: 0px;}
 </div>
 </div>
 
-
+</div>
     <div class="col-sm-2"></div>
     </div>
 <?php include('./footer.php');?>
